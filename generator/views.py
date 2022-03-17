@@ -6,20 +6,8 @@ from django.http import HttpResponse
 
 def home(request):
     # the argument above is the request passed by the user/website visitor
-    return HttpResponse('hi')
+    return render(request, 'generator/home.html', {'password': 'fuckYouB1tch!'})
 
 
-def page1(request):
-    return HttpResponse('<h1>Welcome to page 1 </h1>')
-
-
-def page2(request):
-    return HttpResponse('<h1>Welcome to page 2 </h1>')
-
-
-def page3(request):
-    return HttpResponse('<h1>Welcome to page 3 </h1>')
-
-
-def page4(request):
-    return HttpResponse('<h1>Welcome to page 4 </h1>')
+def password(request):
+    return render(request, 'generator/password.html')
