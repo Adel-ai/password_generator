@@ -19,6 +19,7 @@ from django.urls import path
 
 urlpatterns = [
     # path('adal/', admin.site.urls),
-    path('', views.home),
+    path('', views.home, name='homepage'),
     path('generatepassword/', views.password, name='password'),
+    path('about', views.about, name='about')
 ]
